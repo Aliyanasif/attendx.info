@@ -7,6 +7,7 @@ import {
   Calculator, Smartphone, Zap, ArrowRight, Settings, 
   RefreshCw, Wallet, Mail, Send, MessageSquare
 } from 'lucide-react';
+import { Variants } from 'framer-motion';
 
 // --- ANIMATION VARIANTS ---
 const fadeInUp = {
@@ -29,6 +30,8 @@ const slideInRight = {
   viewport: { once: true, margin: "-100px" },
   transition: { duration: 0.8, ease: "easeOut" }
 };
+
+
 
 // Hero Section Stagger Animations
 const containerVariants = {
@@ -76,13 +79,11 @@ export default function LandingPage() {
           <motion.div 
             initial="hidden" 
             animate="visible" 
-            variants={containerVariants}
-          >
+            variants={containerVariants}>
             <motion.h1 
               variants={textItemVariants}
-              className="text-7xl md:text-[140px] font-black italic tracking-tighter leading-[0.8] mb-8 uppercase"
-            >
-              Automate <br /> 
+              className="text-7xl md:text-[140px] font-black italic tracking-tighter leading-[0.8] mb-8 uppercase">
+              Automate <br/> 
               <motion.span variants={textItemVariants} className="text-blue-600 inline-block mt-2 md:mt-0">
                 Your Workspace
               </motion.span>
@@ -90,8 +91,7 @@ export default function LandingPage() {
 
             <motion.p 
               variants={textItemVariants}
-              className="max-w-3xl mx-auto text-slate-500 font-medium text-xl italic mb-12 leading-relaxed"
-            >
+              className="max-w-3xl mx-auto text-slate-500 font-medium text-xl italic mb-12 leading-relaxed">
               AttendX is the ultimate ecosystem for modern agencies. Experience seamless synchronization, automated payroll logic in PKR, and elite security protocols.
             </motion.p>
             

@@ -8,6 +8,7 @@ import {
   RefreshCw, Wallet, Mail, Send, MessageSquare
 } from 'lucide-react';
 import { Variants } from 'framer-motion';
+import { Analytics } from "@vercel/analytics/next"
 
 // --- ANIMATION VARIANTS ---
 const fadeInUp = {

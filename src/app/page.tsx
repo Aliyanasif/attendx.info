@@ -5,11 +5,10 @@ import { motion, Variants } from 'framer-motion';
 import { 
   MapPin, Fingerprint, ArrowDown, LayoutDashboard, Database, 
   Calculator, Smartphone, Zap, ArrowRight, Settings, 
-  RefreshCw, Wallet, Mail, Send, MessageSquare
+  RefreshCw, Wallet, Mail, Send, MessageSquare, Clock 
 } from 'lucide-react';
 
 // --- ANIMATION VARIANTS (TS ERROR FIXED COMPLETELY) ---
-// Yahan ': any' lagaya hai taake TS isay Variant samajh kar error na de
 const fadeInUp: any = {
   initial: { opacity: 0, y: 50 },
   whileInView: { opacity: 1, y: 0 },
@@ -46,9 +45,9 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans overflow-x-hidden selection:bg-blue-600 selection:text-white">
       
-      {/* 1️⃣ NAVBAR */}
-      <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100 px-4 md:px-6">
-        <div className="max-w-7xl mx-auto h-20 flex items-center justify-between">
+      {/* 1️⃣ NAVBAR (Floating Header with Padding & Radius) */}
+      <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-7xl z-50 bg-white/80 backdrop-blur-xl border border-slate-100 px-4 md:px-6 rounded-[24px] shadow-sm transition-all duration-300">
+        <div className="h-20 flex items-center justify-between">
           <div className="flex items-center gap-2 group cursor-pointer">
             <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-200 group-hover:rotate-12 transition-transform">
               <span className="text-white font-black italic text-lg md:text-xl">A</span>
@@ -187,20 +186,63 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 7️⃣ FEATURE: THE PAYROLL ENGINE */}
-      <section id="payroll" className="py-20 md:py-32 px-4 md:px-6 bg-white">
+      {/* 7️⃣ NEW FEATURE: SMART ATTENDANCE & TIMESHEETS */}
+      <section id="attendance" className="py-20 md:py-32 px-4 md:px-6 overflow-hidden bg-white">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 md:gap-20">
+          <motion.div {...slideInLeft} className="flex-1 space-y-4 md:space-y-6 text-center lg:text-left">
+            <div className="w-14 h-14 md:w-16 md:h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-4 md:mb-6 mx-auto lg:mx-0"><Clock size={32} /></div>
+            <h2 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-none">Smart <br className="hidden md:block"/><span className="text-blue-600">Timesheets.</span></h2>
+            <p className="text-slate-500 text-base md:text-lg italic leading-relaxed">
+              Monitor daily check-ins, late arrivals, and absences with pinpoint accuracy. AttendX automatically transforms raw punch data into structured, easy-to-read attendance logs and actionable reports.
+            </p>
+          </motion.div>
+          <motion.div {...slideInRight} className="flex-1 flex justify-center w-full">
+            <div className="relative w-full flex justify-center max-w-md mx-auto">
+              {/* Custom Coded UI Card for Attendance Log */}
+              <div className="bg-slate-900 p-6 md:p-8 rounded-[32px] md:rounded-[40px] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] border border-slate-800 w-full relative z-10 hover:-translate-y-2 transition-transform duration-500">
+                <div className="flex justify-between items-end mb-6 border-b border-slate-800 pb-4">
+                  <div>
+                    <p className="font-black italic uppercase text-lg md:text-xl text-white">Attendance Log</p>
+                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">March 2026 Record</p>
+                  </div>
+                  <div className="bg-blue-500/20 text-blue-400 px-4 py-2 rounded-xl text-xs font-black italic uppercase border border-blue-500/30">
+                    Live Status
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  {[
+                    { date: "Mar 12, Tue", in: "09:00 AM", out: "06:05 PM", status: "On Time", statusColor: "text-green-400", bg: "bg-slate-800" },
+                    { date: "Mar 13, Wed", in: "09:15 AM", out: "06:00 PM", status: "Late", statusColor: "text-amber-400", bg: "bg-slate-800" },
+                    { date: "Mar 14, Thu", in: "--:-- AM", out: "--:-- PM", status: "Absent", statusColor: "text-red-400", bg: "bg-slate-800/50" },
+                  ].map((log, i) => (
+                    <div key={i} className={`flex justify-between items-center p-4 rounded-2xl border border-slate-700/50 ${log.bg}`}>
+                      <div>
+                        <p className="font-bold text-sm text-slate-200">{log.date}</p>
+                        <p className="text-[11px] text-slate-400 font-medium italic mt-1">In: {log.in} <span className="mx-1">|</span> Out: {log.out}</p>
+                      </div>
+                      <span className={`font-black italic uppercase text-xs tracking-wider ${log.statusColor}`}>{log.status}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 8️⃣ FEATURE: THE PAYROLL ENGINE */}
+      <section id="payroll" className="py-20 md:py-32 px-4 md:px-6 bg-slate-50 border-y border-slate-100">
         <div className="max-w-[1400px] mx-auto text-center">
           <motion.div {...fadeInUp} className="max-w-3xl mx-auto mb-12 md:mb-16">
             <div className="w-14 h-14 md:w-16 md:h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-4 md:mb-6 mx-auto"><Calculator size={32} /></div>
             <h2 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-none mb-4 md:mb-6">Automated <br className="hidden md:block"/><span className="text-blue-600">Payroll Logic.</span></h2>
             <p className="text-slate-500 text-base md:text-lg italic leading-relaxed">
-              No more spreadsheets. AttendX calculates base salaries, tracks present days down to the minute, and outputs exact net payments in PKR. Generate professional slips with a single click.
+              No more spreadsheets. AttendX calculates base salaries, tracks present days down to the minute, and outputs exact net payments in PKR (Rs). Generate professional slips with a single click.
             </p>
           </motion.div>
           
           <motion.div {...fadeInUp} className="relative w-full">
-            {/* Scrollable Container Fixed for Mobile */}
-            <div className="bg-slate-50 p-2 md:p-4 rounded-[20px] md:rounded-[32px] shadow-inner border border-slate-200 block w-full overflow-x-auto">
+            <div className="bg-white p-2 md:p-4 rounded-[20px] md:rounded-[32px] shadow-sm border border-slate-200 block w-full overflow-x-auto">
                <div className="min-w-[600px] md:min-w-[800px] w-full">
                  <img src="/Capture15.JPG" alt="Payroll Table View" className="w-full rounded-[12px] md:rounded-[20px] object-contain shadow-sm" />
                </div>
@@ -214,8 +256,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 8️⃣ FEATURE: MOBILE PORTAL */}
-      <section className="py-20 md:py-32 px-4 md:px-6 overflow-hidden bg-slate-50 border-y border-slate-100">
+      {/* 9️⃣ FEATURE: MOBILE PORTAL */}
+      <section className="py-20 md:py-32 px-4 md:px-6 overflow-hidden bg-white">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 md:gap-20">
           <motion.div {...slideInLeft} className="flex-1 space-y-4 md:space-y-6 text-center lg:text-left">
             <div className="w-14 h-14 md:w-16 md:h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-4 md:mb-6 mx-auto lg:mx-0"><Smartphone size={32} /></div>
@@ -231,7 +273,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 9️⃣ CORE ARCHITECTURE & INSTALLATION */}
+      {/* 🔟 CORE ARCHITECTURE & INSTALLATION */}
       <section className="py-20 md:py-32 px-4 md:px-6 bg-slate-900 text-white md:rounded-[60px] mx-0 md:mx-4 my-10">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeInUp} className="text-center mb-12 md:mb-20">
@@ -255,7 +297,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 🔟 CONTACT US & FEEDBACK */}
+      {/* 1️⃣1️⃣ CONTACT US & FEEDBACK */}
       <section id="contact" className="py-20 md:py-32 px-4 md:px-6">
         <div className="max-w-5xl mx-auto">
           <motion.div {...fadeInUp} className="text-center mb-12 md:mb-16">
@@ -282,8 +324,6 @@ export default function LandingPage() {
             </div>
 
             <div className="flex-[2] bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-sm border border-slate-100 w-full">
-              
-              {/* Formspree Form */}
               <form action="https://formspree.io/f/xnjwwpye" method="POST" className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <input type="text" name="name" required placeholder="Your Name" className="w-full bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl focus:outline-none focus:border-blue-500 font-medium text-sm transition-colors" />
@@ -295,13 +335,12 @@ export default function LandingPage() {
                   <Send size={16} /> Dispatch Message
                 </button>
               </form>
-              
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* 1️⃣1️⃣ ELITE FOOTER */}
+      {/* 1️⃣2️⃣ ELITE FOOTER */}
       <footer className="pt-20 md:pt-24 pb-12 px-4 md:px-6 border-t border-slate-100 text-center bg-slate-50">
         <motion.div {...fadeInUp} className="max-w-4xl mx-auto">
           <div className="w-14 h-14 md:w-16 md:h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 md:mb-8">
@@ -313,13 +352,13 @@ export default function LandingPage() {
             <div className="w-10 h-10 md:w-12 md:h-12 bg-slate-900 rounded-full flex items-center justify-center text-white font-black italic uppercase text-xs md:text-base">AA</div>
             <div className="text-left">
               <p className="text-[9px] md:text-[10px] font-black uppercase text-slate-400 tracking-widest leading-none mb-1">Architect</p>
-              <p className="text-xs md:text-sm font-black italic tracking-tight text-slate-900 leading-none">Aliyan Asif Shehzad</p>
+              <p className="text-xs md:text-sm font-black italic tracking-tight text-slate-900 leading-none">Aliyan Asif</p>
             </div>
           </div>
           
           <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 md:gap-10 text-[9px] font-black uppercase tracking-[0.3em] text-slate-400">
              <p>© 2026 AttendX Portal</p>
-             <p className="hidden sm:block">Next.js 15 Engineered</p>
+             <p className="hidden sm:block">All Right Reserved</p>
              <p>Karachi, Pakistan</p>
           </div>
         </motion.div>

@@ -79,18 +79,18 @@ export default function LandingPage() {
           <motion.div 
             initial="hidden" 
             animate="visible" 
-            variants={containerVariants}>
+            variants={containerVariants as Variants}>
             <motion.h1 
-              variants={textItemVariants}
+              variants={textItemVariants as Variants}
               className="text-7xl md:text-[140px] font-black italic tracking-tighter leading-[0.8] mb-8 uppercase">
               Automate <br/> 
-              <motion.span variants={textItemVariants} className="text-blue-600 inline-block mt-2 md:mt-0">
+              <motion.span variants={textItemVariants as Variants} className="text-blue-600 inline-block mt-2 md:mt-0">
                 Your Workspace
               </motion.span>
             </motion.h1>
 
             <motion.p 
-              variants={textItemVariants}
+              variants={textItemVariants as Variants}
               className="max-w-3xl mx-auto text-slate-500 font-medium text-xl italic mb-12 leading-relaxed">
               AttendX is the ultimate ecosystem for modern agencies. Experience seamless synchronization, automated payroll logic in PKR, and elite security protocols.
             </motion.p>
@@ -99,7 +99,7 @@ export default function LandingPage() {
               variants={{
                 hidden: { opacity: 0, scale: 0.8 },
                 visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut" } }
-              }}
+              } as Variants}
               className="flex justify-center"
             >
               <motion.a 
@@ -124,7 +124,7 @@ export default function LandingPage() {
 
       {/* 3️⃣ METRICS & TRUST */}
       <section className="py-16 bg-slate-50 border-y border-slate-100 px-6">
-        <motion.div {...fadeInUp} className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+        <motion.div {...fadeInUp as any} className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
           <Stat item="100%" label="GPS Accuracy" />
           <Stat item="0.0s" label="Sync Latency" />
           <Stat item="Auto" label="PKR Payroll" />
@@ -135,7 +135,7 @@ export default function LandingPage() {
       {/* 4️⃣ INFOGRAPHIC: THE ECOSYSTEM FLOW */}
       <section id="workflow" className="py-32 px-6 bg-slate-900 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div {...fadeInUp} className="text-center mb-24">
+          <motion.div {...fadeInUp as any} className="text-center mb-24">
             <h2 className="text-5xl md:text-6xl font-black italic uppercase tracking-tighter mb-4">The <span className="text-blue-500">Ecosystem</span> Flow.</h2>
             <p className="text-slate-400 font-bold uppercase text-[10px] tracking-[0.4em]">How AttendX automates your agency</p>
           </motion.div>
@@ -157,14 +157,14 @@ export default function LandingPage() {
       {/* 5️⃣ FEATURE: GPS LIVE PUNCH */}
       <section id="features" className="py-32 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-20">
-          <motion.div {...slideInLeft} className="flex-1 space-y-6">
+          <motion.div {...slideInLeft as any} className="flex-1 space-y-6">
             <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6"><MapPin size={32} /></div>
             <h2 className="text-5xl md:text-6xl font-black italic uppercase tracking-tighter leading-none">Verified <br/><span className="text-blue-600">Live Punch.</span></h2>
             <p className="text-slate-500 text-lg italic leading-relaxed">
               Eliminate proxy attendance. AttendX utilizes device location APIs to ensure staff are physically present at the office coordinates before allowing a clock-in. The red/blue visual cues provide instant status recognition.
             </p>
           </motion.div>
-          <motion.div {...slideInRight} className="flex-1 flex justify-center">
+          <motion.div {...slideInRight as any} className="flex-1 flex justify-center">
             <div className="relative">
               <div className="absolute inset-0 bg-blue-600/20 blur-3xl rounded-full" />
               <img src="/MobileLivePunch.jpg" alt="Mobile Live Punch" className="relative w-[320px] rounded-[40px] shadow-[0_35px_60px_-15px_rgba(37,99,235,0.3)] border-8 border-slate-50" />
@@ -176,14 +176,14 @@ export default function LandingPage() {
       {/* 6️⃣ FEATURE: MASTER DASHBOARD */}
       <section className="py-32 px-6 bg-slate-50 border-y border-slate-100 overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row-reverse items-center gap-20">
-          <motion.div {...slideInRight} className="flex-1 space-y-6">
+          <motion.div {...slideInRight as any} className="flex-1 space-y-6">
             <div className="w-16 h-16 bg-slate-900 text-blue-500 rounded-2xl flex items-center justify-center mb-6"><LayoutDashboard size={32} /></div>
             <h2 className="text-5xl md:text-6xl font-black italic uppercase tracking-tighter leading-none text-slate-900">Command <br/><span className="text-blue-600">Center.</span></h2>
             <p className="text-slate-500 text-lg italic leading-relaxed">
               The owner's view. Get a bird's-eye perspective of your entire workforce. Track active staff, missing members, and real-time financial liability dynamically updating throughout the day.
             </p>
           </motion.div>
-          <motion.div {...slideInLeft} className="flex-1">
+          <motion.div {...slideInLeft as any} className="flex-1">
             <img src="/Capture10.JPG" alt="Master Dashboard" className="rounded-3xl shadow-2xl border border-slate-200 w-full" />
           </motion.div>
         </div>
@@ -192,7 +192,7 @@ export default function LandingPage() {
       {/* 7️⃣ FEATURE: THE PAYROLL ENGINE */}
       <section id="payroll" className="py-32 px-6 bg-white">
         <div className="max-w-[1400px] mx-auto text-center">
-          <motion.div {...fadeInUp} className="max-w-3xl mx-auto mb-16">
+          <motion.div {...fadeInUp as any} className="max-w-3xl mx-auto mb-16">
             <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 mx-auto"><Calculator size={32} /></div>
             <h2 className="text-5xl md:text-6xl font-black italic uppercase tracking-tighter leading-none mb-6">Automated <br/><span className="text-blue-600">Payroll Logic.</span></h2>
             <p className="text-slate-500 text-lg italic leading-relaxed">
@@ -200,7 +200,7 @@ export default function LandingPage() {
             </p>
           </motion.div>
           
-          <motion.div {...fadeInUp} className="relative">
+          <motion.div {...fadeInUp as any} className="relative">
             <div className="bg-slate-50 p-4 rounded-[32px] shadow-inner border border-slate-200 inline-block w-full overflow-x-auto">
                <img src="/Capture15.JPG" alt="Payroll Table View" className="w-full min-w-[800px] rounded-[20px] object-contain shadow-sm" />
             </div>
@@ -215,14 +215,14 @@ export default function LandingPage() {
       {/* 8️⃣ FEATURE: MOBILE PORTAL */}
       <section className="py-32 px-6 overflow-hidden bg-slate-50 border-y border-slate-100">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-20">
-          <motion.div {...slideInLeft} className="flex-1 space-y-6">
+          <motion.div {...slideInLeft as any} className="flex-1 space-y-6">
             <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6"><Smartphone size={32} /></div>
             <h2 className="text-5xl md:text-6xl font-black italic uppercase tracking-tighter leading-none">Employee <br/><span className="text-blue-600">Empowerment.</span></h2>
             <p className="text-slate-500 text-lg italic leading-relaxed">
               Staff members get their own dedicated interface. They can monitor their attendance history via the visual calendar, track their shift logs, and manage their professional profiles seamlessly from their phones.
             </p>
           </motion.div>
-          <motion.div {...slideInRight} className="flex-1 flex gap-6 justify-center">
+          <motion.div {...slideInRight as any} className="flex-1 flex gap-6 justify-center">
             <img src="/Capture17.JPG" alt="Mobile Calendar" className="w-[260px] rounded-[32px] shadow-2xl border-4 border-white -translate-y-8" />
             <img src="/Capture18.JPG" alt="Mobile Profile" className="w-[260px] rounded-[32px] shadow-2xl border-4 border-white translate-y-8 hidden md:block" />
           </motion.div>
@@ -232,7 +232,7 @@ export default function LandingPage() {
       {/* 9️⃣ CORE ARCHITECTURE & INSTALLATION */}
       <section className="py-32 px-6 bg-slate-900 text-white rounded-[60px] mx-4 my-10">
         <div className="max-w-7xl mx-auto">
-          <motion.div {...fadeInUp} className="text-center mb-20">
+          <motion.div {...fadeInUp as any} className="text-center mb-20">
             <h2 className="text-5xl font-black italic uppercase tracking-tighter mb-4">Tech <span className="text-blue-500">Architecture.</span></h2>
             <p className="text-slate-400 font-bold uppercase text-[10px] tracking-[0.4em]">Built for scale and security</p>
           </motion.div>
@@ -242,7 +242,7 @@ export default function LandingPage() {
             <SolutionCard icon={<Database />} title="Cloud Native" desc="Data synced across all platforms in real-time without manual refreshes." />
           </div>
 
-          <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center border-t border-slate-800 pt-20">
+          <motion.div {...fadeInUp as any} className="max-w-4xl mx-auto text-center border-t border-slate-800 pt-20">
             <h2 className="text-4xl font-black italic uppercase tracking-tighter mb-10">Install The <span className="text-blue-500 underline">Instant App</span></h2>
             <div className="grid md:grid-cols-3 gap-6 text-left">
               <Step num="01" title="Launch" desc="Open attendx-3bih.vercel.app in your mobile browser." />
@@ -256,12 +256,12 @@ export default function LandingPage() {
       {/* 🔟 CONTACT US & FEEDBACK */}
       <section id="contact" className="py-32 px-6">
         <div className="max-w-5xl mx-auto">
-          <motion.div {...fadeInUp} className="text-center mb-16">
+          <motion.div {...fadeInUp as any} className="text-center mb-16">
             <h2 className="text-5xl font-black italic uppercase tracking-tighter mb-4">Connect with the <span className="text-blue-600">Architect.</span></h2>
             <p className="text-slate-500 font-medium italic text-lg">Have a feature request, feedback, or business query? Drop a message directly.</p>
           </motion.div>
 
-          <motion.div {...fadeInUp} className="bg-slate-50 border border-slate-100 rounded-[40px] p-8 md:p-12 shadow-xl flex flex-col md:flex-row gap-12">
+          <motion.div {...fadeInUp as any} className="bg-slate-50 border border-slate-100 rounded-[40px] p-8 md:p-12 shadow-xl flex flex-col md:flex-row gap-12">
             <div className="flex-1 space-y-8">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center"><MessageSquare size={20} /></div>
@@ -274,23 +274,26 @@ export default function LandingPage() {
                 <div className="w-12 h-12 bg-slate-200 text-slate-700 rounded-full flex items-center justify-center"><Mail size={20} /></div>
                 <div>
                   <p className="font-black italic uppercase text-sm">Email Address</p>
-                  <p className="text-slate-500 text-xs font-medium italic">hello@attendx.info</p>
+                  <p className="text-slate-500 text-xs font-medium italic">attendx.info@gmail.com</p>
                 </div>
               </div>
             </div>
 
             <div className="flex-[2] bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
-              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+              
+              {/* Formspree Form Added Here */}
+              <form action="https://formspree.io/f/xnjwwpye" method="POST" className="space-y-4">
                 <div className="grid md:grid-cols-2 gap-4">
-                  <input type="text" placeholder="Your Name" className="w-full bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl focus:outline-none focus:border-blue-500 font-medium text-sm transition-colors" />
-                  <input type="email" placeholder="Email Address" className="w-full bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl focus:outline-none focus:border-blue-500 font-medium text-sm transition-colors" />
+                  <input type="text" name="name" required placeholder="Your Name" className="w-full bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl focus:outline-none focus:border-blue-500 font-medium text-sm transition-colors" />
+                  <input type="email" name="email" required placeholder="Email Address" className="w-full bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl focus:outline-none focus:border-blue-500 font-medium text-sm transition-colors" />
                 </div>
-                <input type="text" placeholder="Subject (e.g., Feature Request)" className="w-full bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl focus:outline-none focus:border-blue-500 font-medium text-sm transition-colors" />
-                <textarea placeholder="Type your message here..." rows={4} className="w-full bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl focus:outline-none focus:border-blue-500 font-medium text-sm transition-colors resize-none"></textarea>
-                <button className="w-full bg-blue-600 text-white font-black italic uppercase tracking-widest text-xs py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-slate-900 transition-colors">
+                <input type="text" name="subject" required placeholder="Subject (e.g., Feature Request)" className="w-full bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl focus:outline-none focus:border-blue-500 font-medium text-sm transition-colors" />
+                <textarea name="message" required placeholder="Type your message here..." rows={4} className="w-full bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl focus:outline-none focus:border-blue-500 font-medium text-sm transition-colors resize-none"></textarea>
+                <button type="submit" className="w-full bg-blue-600 text-white font-black italic uppercase tracking-widest text-xs py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-slate-900 transition-colors">
                   <Send size={16} /> Dispatch Message
                 </button>
               </form>
+              
             </div>
           </motion.div>
         </div>
@@ -298,7 +301,7 @@ export default function LandingPage() {
 
       {/* 1️⃣1️⃣ ELITE FOOTER */}
       <footer className="pt-24 pb-12 px-6 border-t border-slate-100 text-center bg-slate-50">
-        <motion.div {...fadeInUp} className="max-w-4xl mx-auto">
+        <motion.div {...fadeInUp as any} className="max-w-4xl mx-auto">
           <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-8">
             <span className="text-white font-black italic text-3xl">A</span>
           </div>
@@ -313,8 +316,8 @@ export default function LandingPage() {
           </div>
           
           <div className="flex flex-wrap justify-center gap-10 text-[9px] font-black uppercase tracking-[0.3em] text-slate-400">
-             <p>© 2026 AttendX </p>
-             <p>All Right Resurved</p>
+             <p>© 2026 AttendX Portal</p>
+             <p>Next.js 15 Engineered</p>
              <p>Karachi, Pakistan</p>
           </div>
         </motion.div>
@@ -347,7 +350,7 @@ function InfographicStep({ num, icon, title, desc }: any) {
 
 function SolutionCard({ icon, title, desc }: { icon: any, title: string, desc: string }) {
   return (
-    <motion.div variants={fadeInUp} initial="initial" whileInView="whileInView" className="p-8 rounded-[32px] bg-slate-800 border border-slate-700 hover:bg-slate-700 transition-colors text-left">
+    <motion.div variants={fadeInUp as any} initial="initial" whileInView="whileInView" className="p-8 rounded-[32px] bg-slate-800 border border-slate-700 hover:bg-slate-700 transition-colors text-left">
       <div className="text-blue-500 mb-6">{icon}</div>
       <h3 className="text-xl font-black italic uppercase tracking-tighter mb-2 text-white">{title}</h3>
       <p className="text-slate-400 italic font-medium text-sm leading-relaxed">{desc}</p>

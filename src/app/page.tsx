@@ -8,25 +8,26 @@ import {
   RefreshCw, Wallet, Mail, Send, MessageSquare
 } from 'lucide-react';
 
-// --- ANIMATION VARIANTS (Fixed for Vercel/TypeScript) ---
-const fadeInUp = {
+// --- ANIMATION VARIANTS (TS ERROR FIXED COMPLETELY) ---
+// Yahan ': any' lagaya hai taake TS isay Variant samajh kar error na de
+const fadeInUp: any = {
   initial: { opacity: 0, y: 50 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-50px" as any },
+  viewport: { once: true, margin: "-50px" },
   transition: { duration: 0.8, ease: "easeOut" }
 };
 
-const slideInLeft = {
+const slideInLeft: any = {
   initial: { opacity: 0, x: -50 },
   whileInView: { opacity: 1, x: 0 },
-  viewport: { once: true, margin: "-50px" as any },
+  viewport: { once: true, margin: "-50px" },
   transition: { duration: 0.8, ease: "easeOut" }
 };
 
-const slideInRight = {
+const slideInRight: any = {
   initial: { opacity: 0, x: 50 },
   whileInView: { opacity: 1, x: 0 },
-  viewport: { once: true, margin: "-50px" as any },
+  viewport: { once: true, margin: "-50px" },
   transition: { duration: 0.8, ease: "easeOut" }
 };
 
@@ -121,7 +122,7 @@ export default function LandingPage() {
 
       {/* 3️⃣ METRICS & TRUST */}
       <section className="py-12 md:py-16 bg-slate-50 border-y border-slate-100 px-4 md:px-6">
-        <motion.div {...fadeInUp as any} className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 text-center">
+        <motion.div {...fadeInUp} className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 text-center">
           <Stat item="100%" label="GPS Accuracy" />
           <Stat item="0.0s" label="Sync Latency" />
           <Stat item="Auto" label="PKR Payroll" />
@@ -132,7 +133,7 @@ export default function LandingPage() {
       {/* 4️⃣ INFOGRAPHIC: THE ECOSYSTEM FLOW */}
       <section id="workflow" className="py-20 md:py-32 px-4 md:px-6 bg-slate-900 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div {...fadeInUp as any} className="text-center mb-16 md:mb-24">
+          <motion.div {...fadeInUp} className="text-center mb-16 md:mb-24">
             <h2 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter mb-4">The <span className="text-blue-500">Ecosystem</span> Flow.</h2>
             <p className="text-slate-400 font-bold uppercase text-[10px] tracking-[0.4em]">How AttendX automates your agency</p>
           </motion.div>
@@ -154,14 +155,14 @@ export default function LandingPage() {
       {/* 5️⃣ FEATURE: GPS LIVE PUNCH */}
       <section id="features" className="py-20 md:py-32 px-4 md:px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 md:gap-20">
-          <motion.div {...slideInLeft as any} className="flex-1 space-y-4 md:space-y-6 text-center lg:text-left">
+          <motion.div {...slideInLeft} className="flex-1 space-y-4 md:space-y-6 text-center lg:text-left">
             <div className="w-14 h-14 md:w-16 md:h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-4 md:mb-6 mx-auto lg:mx-0"><MapPin size={32} /></div>
             <h2 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-none">Verified <br className="hidden md:block"/><span className="text-blue-600">Live Punch.</span></h2>
             <p className="text-slate-500 text-base md:text-lg italic leading-relaxed">
               Eliminate proxy attendance. AttendX utilizes device location APIs to ensure staff are physically present at the office coordinates before allowing a clock-in. The red/blue visual cues provide instant status recognition.
             </p>
           </motion.div>
-          <motion.div {...slideInRight as any} className="flex-1 flex justify-center w-full">
+          <motion.div {...slideInRight} className="flex-1 flex justify-center w-full">
             <div className="relative w-full flex justify-center">
               <div className="absolute inset-0 bg-blue-600/20 blur-2xl md:blur-3xl rounded-full" />
               <img src="/capture16.JPG" alt="Mobile Live Punch" className="relative w-full max-w-[280px] md:max-w-[320px] rounded-[30px] md:rounded-[40px] shadow-[0_35px_60px_-15px_rgba(37,99,235,0.3)] border-4 md:border-8 border-slate-50 object-contain" />
@@ -173,14 +174,14 @@ export default function LandingPage() {
       {/* 6️⃣ FEATURE: MASTER DASHBOARD */}
       <section className="py-20 md:py-32 px-4 md:px-6 bg-slate-50 border-y border-slate-100 overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-12 md:gap-20">
-          <motion.div {...slideInRight as any} className="flex-1 space-y-4 md:space-y-6 text-center lg:text-left">
+          <motion.div {...slideInRight} className="flex-1 space-y-4 md:space-y-6 text-center lg:text-left">
             <div className="w-14 h-14 md:w-16 md:h-16 bg-slate-900 text-blue-500 rounded-2xl flex items-center justify-center mb-4 md:mb-6 mx-auto lg:mx-0"><LayoutDashboard size={32} /></div>
             <h2 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-none text-slate-900">Command <br className="hidden md:block"/><span className="text-blue-600">Center.</span></h2>
             <p className="text-slate-500 text-base md:text-lg italic leading-relaxed">
               The owner's view. Get a bird's-eye perspective of your entire workforce. Track active staff, missing members, and real-time financial liability dynamically updating throughout the day.
             </p>
           </motion.div>
-          <motion.div {...slideInLeft as any} className="flex-1 w-full">
+          <motion.div {...slideInLeft} className="flex-1 w-full">
             <img src="/Capture10.JPG" alt="Master Dashboard" className="rounded-2xl md:rounded-3xl shadow-xl md:shadow-2xl border border-slate-200 w-full object-contain" />
           </motion.div>
         </div>
@@ -189,7 +190,7 @@ export default function LandingPage() {
       {/* 7️⃣ FEATURE: THE PAYROLL ENGINE */}
       <section id="payroll" className="py-20 md:py-32 px-4 md:px-6 bg-white">
         <div className="max-w-[1400px] mx-auto text-center">
-          <motion.div {...fadeInUp as any} className="max-w-3xl mx-auto mb-12 md:mb-16">
+          <motion.div {...fadeInUp} className="max-w-3xl mx-auto mb-12 md:mb-16">
             <div className="w-14 h-14 md:w-16 md:h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-4 md:mb-6 mx-auto"><Calculator size={32} /></div>
             <h2 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-none mb-4 md:mb-6">Automated <br className="hidden md:block"/><span className="text-blue-600">Payroll Logic.</span></h2>
             <p className="text-slate-500 text-base md:text-lg italic leading-relaxed">
@@ -197,7 +198,7 @@ export default function LandingPage() {
             </p>
           </motion.div>
           
-          <motion.div {...fadeInUp as any} className="relative w-full">
+          <motion.div {...fadeInUp} className="relative w-full">
             {/* Scrollable Container Fixed for Mobile */}
             <div className="bg-slate-50 p-2 md:p-4 rounded-[20px] md:rounded-[32px] shadow-inner border border-slate-200 block w-full overflow-x-auto">
                <div className="min-w-[600px] md:min-w-[800px] w-full">
@@ -216,14 +217,14 @@ export default function LandingPage() {
       {/* 8️⃣ FEATURE: MOBILE PORTAL */}
       <section className="py-20 md:py-32 px-4 md:px-6 overflow-hidden bg-slate-50 border-y border-slate-100">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 md:gap-20">
-          <motion.div {...slideInLeft as any} className="flex-1 space-y-4 md:space-y-6 text-center lg:text-left">
+          <motion.div {...slideInLeft} className="flex-1 space-y-4 md:space-y-6 text-center lg:text-left">
             <div className="w-14 h-14 md:w-16 md:h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-4 md:mb-6 mx-auto lg:mx-0"><Smartphone size={32} /></div>
             <h2 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-none">Employee <br className="hidden md:block"/><span className="text-blue-600">Empowerment.</span></h2>
             <p className="text-slate-500 text-base md:text-lg italic leading-relaxed">
               Staff members get their own dedicated interface. They can monitor their attendance history via the visual calendar, track their shift logs, and manage their professional profiles seamlessly from their phones.
             </p>
           </motion.div>
-          <motion.div {...slideInRight as any} className="flex-1 flex flex-col sm:flex-row gap-6 justify-center items-center w-full">
+          <motion.div {...slideInRight} className="flex-1 flex flex-col sm:flex-row gap-6 justify-center items-center w-full">
             <img src="/Capture17.JPG" alt="Mobile Calendar" className="w-full max-w-[260px] rounded-[30px] md:rounded-[32px] shadow-xl md:shadow-2xl border-4 border-white sm:-translate-y-4 md:-translate-y-8 object-contain" />
             <img src="/Capture18.JPG" alt="Mobile Profile" className="w-full max-w-[260px] rounded-[30px] md:rounded-[32px] shadow-xl md:shadow-2xl border-4 border-white sm:translate-y-4 md:translate-y-8 hidden sm:block object-contain" />
           </motion.div>
@@ -233,7 +234,7 @@ export default function LandingPage() {
       {/* 9️⃣ CORE ARCHITECTURE & INSTALLATION */}
       <section className="py-20 md:py-32 px-4 md:px-6 bg-slate-900 text-white md:rounded-[60px] mx-0 md:mx-4 my-10">
         <div className="max-w-7xl mx-auto">
-          <motion.div {...fadeInUp as any} className="text-center mb-12 md:mb-20">
+          <motion.div {...fadeInUp} className="text-center mb-12 md:mb-20">
             <h2 className="text-4xl md:text-5xl font-black italic uppercase tracking-tighter mb-4">Tech <span className="text-blue-500">Architecture.</span></h2>
             <p className="text-slate-400 font-bold uppercase text-[10px] tracking-[0.4em]">Built for scale and security</p>
           </motion.div>
@@ -243,7 +244,7 @@ export default function LandingPage() {
             <SolutionCard icon={<Database />} title="Cloud Native" desc="Data synced across all platforms in real-time without manual refreshes." />
           </div>
 
-          <motion.div {...fadeInUp as any} className="max-w-4xl mx-auto text-center border-t border-slate-800 pt-16 md:pt-20">
+          <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center border-t border-slate-800 pt-16 md:pt-20">
             <h2 className="text-3xl md:text-4xl font-black italic uppercase tracking-tighter mb-8 md:mb-10">Install The <span className="text-blue-500 underline">Instant App</span></h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
               <Step num="01" title="Launch" desc="Open attendx-3bih.vercel.app in your mobile browser." />
@@ -257,12 +258,12 @@ export default function LandingPage() {
       {/* 🔟 CONTACT US & FEEDBACK */}
       <section id="contact" className="py-20 md:py-32 px-4 md:px-6">
         <div className="max-w-5xl mx-auto">
-          <motion.div {...fadeInUp as any} className="text-center mb-12 md:mb-16">
+          <motion.div {...fadeInUp} className="text-center mb-12 md:mb-16">
             <h2 className="text-4xl md:text-5xl font-black italic uppercase tracking-tighter mb-4">Connect with the <span className="text-blue-600">Architect.</span></h2>
             <p className="text-slate-500 font-medium italic text-base md:text-lg">Have a feature request, feedback, or business query? Drop a message directly.</p>
           </motion.div>
 
-          <motion.div {...fadeInUp as any} className="bg-slate-50 border border-slate-100 rounded-[30px] md:rounded-[40px] p-6 md:p-12 shadow-xl flex flex-col md:flex-row gap-8 md:gap-12">
+          <motion.div {...fadeInUp} className="bg-slate-50 border border-slate-100 rounded-[30px] md:rounded-[40px] p-6 md:p-12 shadow-xl flex flex-col md:flex-row gap-8 md:gap-12">
             <div className="flex-1 space-y-6 md:space-y-8">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center shrink-0"><MessageSquare size={20} /></div>
@@ -302,7 +303,7 @@ export default function LandingPage() {
 
       {/* 1️⃣1️⃣ ELITE FOOTER */}
       <footer className="pt-20 md:pt-24 pb-12 px-4 md:px-6 border-t border-slate-100 text-center bg-slate-50">
-        <motion.div {...fadeInUp as any} className="max-w-4xl mx-auto">
+        <motion.div {...fadeInUp} className="max-w-4xl mx-auto">
           <div className="w-14 h-14 md:w-16 md:h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 md:mb-8">
             <span className="text-white font-black italic text-2xl md:text-3xl">A</span>
           </div>
@@ -351,7 +352,7 @@ function InfographicStep({ num, icon, title, desc }: any) {
 
 function SolutionCard({ icon, title, desc }: { icon: any, title: string, desc: string }) {
   return (
-    <motion.div variants={fadeInUp as any} initial="initial" whileInView="whileInView" className="p-6 md:p-8 rounded-[24px] md:rounded-[32px] bg-slate-800 border border-slate-700 hover:bg-slate-700 transition-colors text-center md:text-left">
+    <motion.div variants={fadeInUp} initial="initial" whileInView="whileInView" className="p-6 md:p-8 rounded-[24px] md:rounded-[32px] bg-slate-800 border border-slate-700 hover:bg-slate-700 transition-colors text-center md:text-left">
       <div className="text-blue-500 mb-4 md:mb-6 flex justify-center md:justify-start">{icon}</div>
       <h3 className="text-lg md:text-xl font-black italic uppercase tracking-tighter mb-2 text-white">{title}</h3>
       <p className="text-slate-400 italic font-medium text-xs md:text-sm leading-relaxed">{desc}</p>

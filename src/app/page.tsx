@@ -41,16 +41,6 @@ const textItemVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
 };
 
-<script src="https://analytics.ahrefs.com/analytics.js" data-key="mv2kf9Qha7nK3s4dzFDWpg" async></script>
-
-<script>
-  var ahrefs_analytics_script = document.createElement('script');
-  ahrefs_analytics_script.async = true;
-  ahrefs_analytics_script.src = 'https://analytics.ahrefs.com/analytics.js';
-  ahrefs_analytics_script.setAttribute('data-key', 'mv2kf9Qha7nK3s4dzFDWpg');
-  document.getElementsByTagName('head')[0].appendChild(ahrefs_analytics_script);
-</script>
-
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans overflow-x-hidden selection:bg-blue-600 selection:text-white">

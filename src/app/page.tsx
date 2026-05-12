@@ -1,30 +1,29 @@
 "use client";
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { 
   MapPin, Fingerprint, ArrowDown, LayoutDashboard, Database, 
   Calculator, Smartphone, Zap, ArrowRight, Settings, 
   RefreshCw, Wallet, Mail, Send, MessageSquare
 } from 'lucide-react';
-import { Variants } from 'framer-motion';
 
 // --- ANIMATION VARIANTS (Fixed for Vercel/TypeScript) ---
-const fadeInUp: Variants = {
+const fadeInUp = {
   initial: { opacity: 0, y: 50 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true, margin: "-50px" as any },
   transition: { duration: 0.8, ease: "easeOut" }
 };
 
-const slideInLeft: Variants = {
+const slideInLeft = {
   initial: { opacity: 0, x: -50 },
   whileInView: { opacity: 1, x: 0 },
   viewport: { once: true, margin: "-50px" as any },
   transition: { duration: 0.8, ease: "easeOut" }
 };
 
-const slideInRight: Variants = {
+const slideInRight = {
   initial: { opacity: 0, x: 50 },
   whileInView: { opacity: 1, x: 0 },
   viewport: { once: true, margin: "-50px" as any },
@@ -77,18 +76,18 @@ export default function LandingPage() {
           <motion.div 
             initial="hidden" 
             animate="visible" 
-            variants={containerVariants as Variants}>
+            variants={containerVariants}>
             <motion.h1 
-              variants={textItemVariants as Variants}
+              variants={textItemVariants}
               className="text-5xl sm:text-7xl lg:text-[140px] font-black italic tracking-tighter leading-[1] lg:leading-[0.8] mb-6 md:mb-8 uppercase">
               Automate <br/> 
-              <motion.span variants={textItemVariants as Variants} className="text-blue-600 inline-block mt-1 md:mt-2 lg:mt-0">
+              <motion.span variants={textItemVariants} className="text-blue-600 inline-block mt-1 md:mt-2 lg:mt-0">
                 Your Workspace
               </motion.span>
             </motion.h1>
 
             <motion.p 
-              variants={textItemVariants as Variants}
+              variants={textItemVariants}
               className="max-w-3xl mx-auto text-slate-500 font-medium text-base md:text-xl italic mb-10 md:mb-12 leading-relaxed px-2">
               AttendX is the ultimate ecosystem for modern agencies. Experience seamless synchronization, automated payroll logic in PKR, and elite security protocols.
             </motion.p>
@@ -313,7 +312,7 @@ export default function LandingPage() {
             <div className="w-10 h-10 md:w-12 md:h-12 bg-slate-900 rounded-full flex items-center justify-center text-white font-black italic uppercase text-xs md:text-base">AA</div>
             <div className="text-left">
               <p className="text-[9px] md:text-[10px] font-black uppercase text-slate-400 tracking-widest leading-none mb-1">Architect</p>
-              <p className="text-xs md:text-sm font-black italic tracking-tight text-slate-900 leading-none">Aliyan Asif</p>
+              <p className="text-xs md:text-sm font-black italic tracking-tight text-slate-900 leading-none">Aliyan Asif Shehzad</p>
             </div>
           </div>
           

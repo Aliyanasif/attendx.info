@@ -30,6 +30,10 @@ const slideInRight: any = {
   transition: { duration: 0.8, ease: "easeOut" }
 };
 
+<head>
+  <meta name="google-site-verification" content="42KXYDEzeFdQqxY-Kbaw2OifXpaJiyBYIHBeXTYQE9s" />
+  <head/>
+
 // Hero Section Stagger Animations
 const containerVariants: Variants = {
   hidden: {},
@@ -40,6 +44,11 @@ const textItemVariants: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
 };
+
+<head>
+  <meta name="google-site-verification" content="42KXYDEzeFdQqxY-Kbaw2OifXpaJiyBYIHBeXTYQE9s" />
+  <head/>
+
 
 export default function LandingPage() {
   return (

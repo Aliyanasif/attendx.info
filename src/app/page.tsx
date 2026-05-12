@@ -168,7 +168,7 @@ export default function LandingPage() {
           <motion.div {...slideInRight as any} className="flex-1 flex justify-center">
             <div className="relative">
               <div className="absolute inset-0 bg-blue-600/20 blur-3xl rounded-full" />
-              <img src="/MobileLivePunch.jpg" alt="Mobile Live Punch" className="relative w-[320px] rounded-[40px] shadow-[0_35px_60px_-15px_rgba(37,99,235,0.3)] border-8 border-slate-50" />
+              <img src="/capture16.JPG" alt="Mobile Live Punch" className="relative w-[320px] rounded-[40px] shadow-[0_35px_60px_-15px_rgba(37,99,235,0.3)] border-8 border-slate-50" />
             </div>
           </motion.div>
         </div>

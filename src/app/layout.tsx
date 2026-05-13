@@ -8,13 +8,16 @@ import "./globals.css";
 import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata = {
+  metadataBase: new URL("https://attendx.info"),
+
   title: "AttendX | Attendance & Payroll Software in Pakistan",
+
   description:
     "AttendX helps Pakistani businesses manage employee attendance, payroll, overtime, staff records, and workforce reports from one smart system.",
-  manifest: "/manifest.json",
-  verification: {
-    google: "42KXYDEzeFdQqxY-Kbaw2OifXpaJiyBYIHBeXTYQE9s",
-  },
+    manifest: "/manifest.json",
+    verification: {
+      google: "42KXYDEzeFdQqxY-Kbaw2OifXpaJiyBYIHBeXTYQE9s",
+    },
   openGraph: {
     title: "AttendX | Attendance & Payroll Software in Pakistan",
     description:
@@ -23,7 +26,7 @@ export const metadata = {
     siteName: "AttendX",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://attendx.info/og-image.png",
         width: 1200,
         height: 630,
         alt: "AttendX Dashboard",
@@ -33,6 +36,33 @@ export const metadata = {
     type: "website",
   },
 };
+
+// export const metadata = {
+//   title: "AttendX | Attendance & Payroll Software in Pakistan",
+//   description:
+//     "AttendX helps Pakistani businesses manage employee attendance, payroll, overtime, staff records, and workforce reports from one smart system.",
+//   manifest: "/manifest.json",
+//   verification: {
+//     google: "42KXYDEzeFdQqxY-Kbaw2OifXpaJiyBYIHBeXTYQE9s",
+//   },
+//   openGraph: {
+//     title: "AttendX | Attendance & Payroll Software in Pakistan",
+//     description:
+//       "Manage attendance, payroll, employees, overtime, and workforce operations with AttendX.",
+//     url: "https://attendx.info",
+//     siteName: "AttendX",
+//     images: [
+//       {
+//         url: "/og-image.png",
+//         width: 1200,
+//         height: 630,
+//         alt: "AttendX Dashboard",
+//       },
+//     ],
+//     locale: "en_PK",
+//     type: "website",
+//   },
+// };
 
 
 

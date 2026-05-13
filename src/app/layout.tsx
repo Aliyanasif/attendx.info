@@ -3,31 +3,27 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+import type { Metadata } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
   title: "AttendX | Elite Workforce Management",
   description:
-    "AttendX is an attendance and payroll management software for Pakistani businesses, offices, schools, factories, and teams.",
+    "AttendX is a smart attendance and payroll management software for businesses in Pakistan. Manage attendance, payroll, employees, reports, and workforce operations from one system.",
+  manifest: "/manifest.json",
   verification: {
     google: "42KXYDEzeFdQqxY-Kbaw2OifXpaJiyBYIHBeXTYQE9s",
   },
 };
 
-
-export const metadata = {
-  title: "AttendX | Elite Workforce Management",
-  description: "Next-Gen SaaS portal for real-time attendance and payroll management. Developed by Aliyan Asif.",
-  manifest: "/manifest.json",
-  themeColor: "#2563eb",
-};
-
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased bg-white`}>{children}</body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   );
 }

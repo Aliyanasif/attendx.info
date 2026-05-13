@@ -297,6 +297,43 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* FAQ SECTION */}
+      <section id="faq" className="py-20 md:py-32 px-4 md:px-6 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <motion.div {...fadeInUp} className="text-center mb-12 md:mb-16">
+            <p className="text-blue-600 font-black uppercase tracking-[0.35em] text-xs mb-4">
+              Frequently Asked Questions
+            </p>
+            <h2 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-none">
+              Questions About <span className="text-blue-600">AttendX?</span>
+            </h2>
+          </motion.div>
+
+          <div className="space-y-4">
+            <FAQ
+              question="What is AttendX?"
+              answer="AttendX is an attendance and payroll management software designed for businesses in Pakistan. It helps manage employee attendance, payroll, overtime, staff records, and workforce reports from one system."
+            />
+            <FAQ
+              question="Who can use AttendX?"
+              answer="AttendX can be used by offices, agencies, schools, factories, restaurants, service businesses, and teams that need a reliable attendance and payroll system."
+            />
+            <FAQ
+              question="Does AttendX support payroll in PKR?"
+              answer="Yes. AttendX is designed with Pakistani businesses in mind and supports salary calculations, payroll records, and workforce management in PKR."
+            />
+            <FAQ
+              question="Can employees use AttendX on mobile?"
+              answer="Yes. AttendX works on browser and mobile devices. Employees can access the system from their phones and use attendance-related features depending on their permissions."
+            />
+            <FAQ
+              question="Is AttendX suitable for small businesses?"
+              answer="Yes. AttendX is useful for small and growing businesses that want to reduce manual attendance work, payroll mistakes, and spreadsheet dependency."
+            />
+          </div>
+        </div>
+      </section>
+
       {/* 1️⃣1️⃣ CONTACT US & FEEDBACK */}
       <section id="contact" className="py-20 md:py-32 px-4 md:px-6">
         <div className="max-w-5xl mx-auto">
@@ -407,6 +444,19 @@ function Step({ num, title, desc }: { num: string, title: string, desc: string }
       <p className="text-4xl md:text-5xl font-black italic text-blue-500/20 mb-3 md:mb-4">{num}</p>
       <h4 className="text-base md:text-lg font-black italic uppercase mb-2 text-white">{title}</h4>
       <p className="text-xs md:text-sm text-slate-400 font-medium italic">{desc}</p>
+    </div>
+  );
+}
+
+function FAQ({ question, answer }: { question: string; answer: string }) {
+  return (
+    <div className="bg-slate-50 border border-slate-100 rounded-[28px] p-6 md:p-8">
+      <h3 className="text-lg md:text-xl font-black italic uppercase tracking-tighter text-slate-900 mb-3">
+        {question}
+      </h3>
+      <p className="text-slate-500 text-sm md:text-base italic leading-relaxed">
+        {answer}
+      </p>
     </div>
   );
 }

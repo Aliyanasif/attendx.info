@@ -43,6 +43,58 @@ const textItemVariants: Variants = {
 
 export default function LandingPage() {
   return (
+    <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "What is AttendX?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "AttendX is an attendance and payroll management software designed for businesses in Pakistan. It helps manage employee attendance, payroll, overtime, staff records, and workforce reports from one system.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Who can use AttendX?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "AttendX can be used by offices, agencies, schools, factories, restaurants, service businesses, and teams that need a reliable attendance and payroll system.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Does AttendX support payroll in PKR?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes. AttendX is designed with Pakistani businesses in mind and supports salary calculations, payroll records, and workforce management in PKR.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Can employees use AttendX on mobile?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes. AttendX works on browser and mobile devices. Employees can access the system from their phones and use attendance-related features depending on their permissions.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Is AttendX suitable for small businesses?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes. AttendX is useful for small and growing businesses that want to reduce manual attendance work, payroll mistakes, and spreadsheet dependency.",
+                  },
+                },
+              ],
+            }),
+          }}
+        />
     <div className="min-h-screen bg-white text-slate-900 font-sans overflow-x-hidden selection:bg-blue-600 selection:text-white">
       
       {/* 1️⃣ NAVBAR (Floating Header with Padding & Radius) */}
@@ -403,6 +455,7 @@ export default function LandingPage() {
         </motion.div>
       </footer>
     </div>
+    </>
   );
 }
 

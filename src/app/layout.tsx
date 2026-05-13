@@ -3,8 +3,8 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "AttendX - Attendance & Payroll Management Software",
+export const metadata = {
+  title: "AttendX | Elite Workforce Management",
   description:
     "AttendX is an attendance and payroll management software for Pakistani businesses, offices, schools, factories, and teams.",
   verification: {

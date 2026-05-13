@@ -5,6 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 import type { Metadata } from "next";
 import "./globals.css";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   title: "AttendX | Elite Workforce Management",
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>{children}</body>
+      <GoogleAnalytics gaId="G-GXCCRJXC2E" />
     </html>
   );
 }

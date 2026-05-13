@@ -7,15 +7,17 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { GoogleAnalytics } from '@next/third-parties/google'
 
-export const metadata: Metadata = {
-  title: "AttendX | Elite Workforce Management",
+export const metadata = {
+  title: "AttendX | Attendance & Payroll Software in Pakistan",
   description:
-    "AttendX is a smart attendance and payroll management software for businesses in Pakistan. Manage attendance, payroll, employees, reports, and workforce operations from one system.",
+    "AttendX helps Pakistani businesses manage employee attendance, payroll, overtime, staff records, and workforce reports from one smart system.",
   manifest: "/manifest.json",
   verification: {
     google: "42KXYDEzeFdQqxY-Kbaw2OifXpaJiyBYIHBeXTYQE9s",
   },
 };
+
+
 
 export default function RootLayout({
   children,

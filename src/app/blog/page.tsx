@@ -1,3 +1,13 @@
+export const metadata = {
+    title: "AttendX Blog | Attendance, Payroll & Workforce Management",
+    description:
+      "Read AttendX insights about attendance management, payroll software, employee tracking, workforce automation, and business productivity in Pakistan.",
+    alternates: {
+      canonical: "https://attendx.info/blog",
+    },
+  };
+
+
 export default function BlogPage() {
     const posts = [
       {

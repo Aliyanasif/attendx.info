@@ -3,6 +3,16 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const metadata: Metadata = {
+  title: "AttendX - Attendance & Payroll Management Software",
+  description:
+    "AttendX is an attendance and payroll management software for Pakistani businesses, offices, schools, factories, and teams.",
+  verification: {
+    google: "42KXYDEzeFdQqxY-Kbaw2OifXpaJiyBYIHBeXTYQE9s",
+  },
+};
+
+
 export const metadata = {
   title: "AttendX | Elite Workforce Management",
   description: "Next-Gen SaaS portal for real-time attendance and payroll management. Developed by Aliyan Asif.",
@@ -22,6 +32,6 @@ export default function RootLayout({
   );
 }
 
-<head>
+{/* <head>
   <meta name="google-site-verification" content="42KXYDEzeFdQqxY-Kbaw2OifXpaJiyBYIHBeXTYQE9s" />
-  <head/>
+  <head/> */}

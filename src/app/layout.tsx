@@ -18,6 +18,11 @@ export const metadata = {
     verification: {
       google: "42KXYDEzeFdQqxY-Kbaw2OifXpaJiyBYIHBeXTYQE9s",
     },
+
+    alternates: {
+      canonical: "https://attendx.info",
+    },
+
   openGraph: {
     title: "AttendX | Attendance & Payroll Software in Pakistan",
     description:

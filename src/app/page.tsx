@@ -56,14 +56,14 @@ export default function LandingPage() {
           </div>
           
           <div className="hidden md:flex items-center gap-8 text-[11px] font-black uppercase tracking-[0.15em] text-slate-400">
-            <a href="#workflow" className="hover:text-blue-600 transition-colors">Ecosystem</a>
-            <a href="#features" className="hover:text-blue-600 transition-colors">Features</a>
-            <a href="#payroll" className="hover:text-blue-600 transition-colors">Payroll Engine</a>
-            <a href="#contact" className="hover:text-blue-600 transition-colors">Contact Architect</a>
+          <a href="#features" className="hover:text-blue-600 transition-colors">Features</a>
+          <a href="#payroll" className="hover:text-blue-600 transition-colors">Payroll</a>
+          <a href="/about" className="hover:text-blue-600 transition-colors">About</a>
+          <a href="#contact" className="hover:text-blue-600 transition-colors">Contact</a>
           </div>
 
           <a href="https://attendx-3bih.vercel.app" target="_blank" rel="noreferrer" className="bg-slate-900 text-white px-4 py-2 md:px-6 md:py-2.5 rounded-full font-bold text-xs md:text-sm hover:bg-blue-600 transition-all shadow-md active:scale-95 text-center">
-            Get App
+          Launch AttendX
           </a>
         </div>
       </nav>
@@ -356,10 +356,12 @@ export default function LandingPage() {
             </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 md:gap-10 text-[9px] font-black uppercase tracking-[0.3em] text-slate-400">
-             <p>© 2026 AttendX Portal</p>
-             <p className="hidden sm:block">All Right Reserved</p>
-             <p>Karachi, Pakistan</p>
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 md:gap-8 text-[9px] font-black uppercase tracking-[0.25em] text-slate-400">
+           <p>© 2026 AttendX Portal</p>
+           <a href="/about" className="hover:text-blue-600 transition-colors">About</a>
+           <a href="/privacy-policy" className="hover:text-blue-600 transition-colors">Privacy Policy</a>
+           <a href="/terms" className="hover:text-blue-600 transition-colors">Terms</a>
+           <p>Karachi, Pakistan</p>
           </div>
         </motion.div>
       </footer>

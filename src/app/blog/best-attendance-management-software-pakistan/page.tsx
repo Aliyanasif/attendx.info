@@ -1,6 +1,16 @@
 import Link from "next/link";
 import { ArrowLeft, CheckCircle } from "lucide-react";
 
+export const metadata = {
+    title: "Best Attendance Management Software in Pakistan | AttendX",
+    description:
+      "Learn how attendance management software helps Pakistani businesses track employees, reduce payroll errors, manage overtime, and improve workforce control.",
+    alternates: {
+      canonical:
+        "https://attendx.info/blog/best-attendance-management-software-pakistan",
+    },
+  };
+
 export default function BlogPost() {
   return (
     <main className="min-h-screen bg-white text-slate-900 px-4 md:px-6 py-10">

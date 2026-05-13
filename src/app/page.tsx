@@ -411,6 +411,47 @@ export default function LandingPage() {
           </div>
         </section>
 
+        {/* BLOG PREVIEW SECTION */}
+<section id="insights" className="py-20 md:py-32 px-4 md:px-6 bg-slate-50 border-y border-slate-100">
+  <div className="max-w-6xl mx-auto">
+    <motion.div {...fadeInUp} className="text-center mb-12 md:mb-16">
+      <p className="text-blue-600 font-black uppercase tracking-[0.35em] text-xs mb-4">
+        AttendX Insights
+      </p>
+      <h2 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-none">
+        Learn Workforce <span className="text-blue-600">Automation.</span>
+      </h2>
+    </motion.div>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <BlogCard
+        title="Best Attendance Management Software in Pakistan"
+        desc="Learn how attendance software helps Pakistani businesses automate workforce management."
+        href="/blog/best-attendance-management-software-pakistan"
+      />
+      <BlogCard
+        title="How Payroll Systems Reduce Salary Errors"
+        desc="Understand how payroll automation improves salary accuracy and saves business time."
+        href="/blog/payroll-management-system-benefits"
+      />
+      <BlogCard
+        title="Why Businesses Need Attendance Tracking"
+        desc="Explore why employee attendance tracking is important for productivity and payroll."
+        href="/blog/employee-attendance-tracking"
+      />
+    </div>
+
+    <div className="text-center mt-10">
+      <a
+        href="/blog"
+        className="inline-flex bg-slate-900 text-white px-8 py-4 rounded-full font-black italic uppercase text-xs tracking-[0.2em] hover:bg-blue-600 transition-colors"
+      >
+        View All Articles
+      </a>
+    </div>
+  </div>
+</section>
+
         {/* 1️⃣1️⃣ CONTACT US & FEEDBACK */}
         <section id="contact" className="py-20 md:py-32 px-4 md:px-6">
           <div className="max-w-5xl mx-auto">
@@ -536,5 +577,25 @@ function FAQ({ question, answer }: { question: string; answer: string }) {
         {answer}
       </p>
     </div>
+  );
+}
+function BlogCard({ title, desc, href }: { title: string; desc: string; href: string }) {
+  return (
+    <a
+      href={href}
+      className="bg-white border border-slate-100 rounded-[28px] p-6 hover:-translate-y-2 transition-all duration-300 shadow-sm"
+    >
+      <p className="text-blue-600 text-[10px] font-black uppercase tracking-[0.3em] mb-4">
+        Blog Article
+      </p>
+
+      <h3 className="text-2xl font-black italic uppercase tracking-tighter mb-3 leading-tight">
+        {title}
+      </h3>
+
+      <p className="text-slate-500 text-sm italic leading-relaxed">
+        {desc}
+      </p>
+    </a>
   );
 }

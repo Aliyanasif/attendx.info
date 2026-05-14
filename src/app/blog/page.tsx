@@ -87,7 +87,7 @@ export default function BlogPage() {
   
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
   
-            {posts.map((post, index) => (
+            {blog.map((post, index) => (
               <a
                 key={index}
                 href={`/blog/${post.slug}`}

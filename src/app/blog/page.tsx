@@ -18,7 +18,7 @@ export default function BlogPage() {
     },
   
     {
-      title: "How Payroll Software Helps Businesses Reduce Salary Errors",
+      title: "how payroll software reduces salary errors",
       slug: "how-payroll-software-reduces-salary-errors",
       description:
         "Learn how payroll automation helps businesses improve salary accuracy and workforce efficiency.",

@@ -19,7 +19,7 @@ export default function BlogPage() {
   
     {
       title: "how payroll software reduces salary errors",
-      slug: "how-payroll-software-reduces-salary-errors",
+      slug: "payroll-management-system-benefits",
       description:
         "Learn how payroll automation helps businesses improve salary accuracy and workforce efficiency.",
     },

@@ -1,153 +1,130 @@
-import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowLeft, CheckCircle } from "lucide-react";
 
-export const metadata: Metadata = {
-  title:
-    "How Payroll Software Helps Businesses Reduce Salary Errors | AttendX",
+export const metadata = {
+  title: "How Payroll Management Systems Reduce Salary Errors | AttendX",
 
   description:
-    "Learn how payroll software helps businesses automate salary calculations, reduce payroll mistakes, and improve workforce management.",
-
-  keywords: [
-    "payroll software pakistan",
-    "salary management system",
-    "payroll automation",
-    "attendance payroll software",
-    "AttendX",
-  ],
+    "Learn how payroll management systems help businesses reduce salary mistakes, automate calculations, and improve workforce efficiency.",
 
   alternates: {
     canonical:
-      "https://attendx.info/blog/how-payroll-software-reduces-salary-errors",
+      "https://attendx.info/blog/payroll-management-system-benefits",
   },
 };
 
-export default function BlogPage() {
+export default function BlogPost() {
   return (
-    <main className="min-h-screen bg-white text-black px-6 py-20">
-
+    <main className="min-h-screen bg-white text-slate-900 px-4 md:px-6 py-10">
       <div className="max-w-4xl mx-auto">
 
-        <h1 className="text-5xl font-black mb-8 leading-tight">
-          How Payroll Software Helps Businesses Reduce Salary Errors
-        </h1>
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.25em] text-slate-400 hover:text-blue-600 transition-colors mb-12"
+        >
+          <ArrowLeft size={16} /> Back to Blog
+        </Link>
 
-        <p className="text-lg text-gray-600 mb-10">
-          Payroll mistakes are one of the biggest operational problems for
-          growing businesses. Incorrect salary calculations, overtime mistakes,
-          attendance mismatches, and manual spreadsheet errors can damage
-          employee trust and waste valuable management time.
-        </p>
+        <article>
 
-        <div className="space-y-8 text-lg leading-9 text-gray-800">
-
-          <p>
-            Modern payroll software helps businesses automate salary processing,
-            reduce manual calculations, and improve workforce management
-            accuracy.
+          <p className="text-blue-600 font-black uppercase tracking-[0.35em] text-xs mb-4">
+            Payroll Management
           </p>
 
-          <h2 className="text-3xl font-bold mt-12">
-            Why Payroll Errors Happen
-          </h2>
+          <h1 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-none mb-6">
+            How Payroll Management Systems Reduce Salary Errors
+          </h1>
 
-          <p>
-            Many companies still calculate salaries manually using attendance
-            registers, spreadsheets, or outdated systems. As teams grow, these
-            methods become slower and more difficult to manage.
+          <p className="text-slate-500 text-lg italic leading-relaxed mb-10">
+            Payroll mistakes can damage employee trust, create financial confusion, and waste business time. Modern payroll management systems help companies automate salary calculations, reduce human errors, and improve workforce operations.
           </p>
 
-          <p>
-            Common payroll problems include incorrect overtime calculations,
-            missing attendance records, salary deduction mistakes, and delayed
-            payroll processing.
-          </p>
+          <Section
+            title="Why Payroll Errors Happen"
+            text="Manual payroll handling often depends on spreadsheets, handwritten attendance records, and repetitive calculations. This increases the risk of overtime mistakes, deduction issues, incorrect salaries, and delayed payments."
+          />
 
-          <h2 className="text-3xl font-bold mt-12">
-            Payroll Automation Saves Time
-          </h2>
+          <Section
+            title="The Role of Payroll Automation"
+            text="Payroll automation systems calculate salaries using attendance data, overtime records, absences, and working hours automatically. This removes repetitive manual calculations and improves payment accuracy."
+          />
 
-          <p>
-            Payroll software automatically calculates salaries based on employee
-            attendance, shift timing, overtime, and deductions.
-          </p>
+          <Section
+            title="Benefits of Payroll Management Software"
+            text="Businesses using payroll software can process salaries faster, reduce administrative workload, improve transparency, and maintain organized payroll records for employees."
+          />
 
-          <p>
-            This reduces administrative workload and improves payroll accuracy.
-          </p>
+          <div className="bg-slate-900 text-white rounded-[32px] p-8 md:p-10 my-10">
 
-          <h2 className="text-3xl font-bold mt-12">
-            Integration With Attendance Systems
-          </h2>
+            <h2 className="text-3xl font-black italic uppercase tracking-tighter mb-6">
+              Core Payroll Features
+            </h2>
 
-          <p>
-            The best payroll software works together with attendance tracking
-            systems. This allows businesses to synchronize employee attendance
-            directly with salary calculations.
-          </p>
+            <ul className="space-y-4">
 
-          <p>
-            Managers can instantly view workforce data, attendance records, and
-            payroll liabilities from one centralized dashboard.
-          </p>
+              {[
+                "Automatic salary calculation",
+                "Attendance-based payroll",
+                "Overtime and deduction tracking",
+                "Monthly payroll reports",
+                "Employee salary records",
+                "Payroll processing in PKR",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="flex gap-3 text-slate-300 italic"
+                >
+                  <CheckCircle
+                    className="text-blue-500 shrink-0 mt-0.5"
+                    size={20}
+                  />
+                  {item}
+                </li>
+              ))}
 
-          <h2 className="text-3xl font-bold mt-12">
-            Key Benefits of Payroll Software
-          </h2>
-
-          <ul className="list-disc pl-6 space-y-4">
-
-            <li>Automated salary calculations</li>
-
-            <li>Reduced payroll errors</li>
-
-            <li>Overtime management</li>
-
-            <li>Attendance synchronization</li>
-
-            <li>Employee payroll history</li>
-
-            <li>Workforce reporting</li>
-
-            <li>Faster payroll processing</li>
-
-          </ul>
-
-          <h2 className="text-3xl font-bold mt-12">
-            AttendX Payroll Management
-          </h2>
-
-          <p>
-            AttendX combines attendance tracking and payroll automation into one
-            modern workforce management platform for Pakistani businesses.
-          </p>
-
-          <p>
-            Companies can manage employee attendance, payroll processing,
-            overtime tracking, leave requests, and workforce operations from one
-            centralized system.
-          </p>
-
-          <div className="mt-14 p-8 rounded-3xl bg-blue-600 text-white">
-
-            <h3 className="text-3xl font-bold mb-4">
-              Explore AttendX
-            </h3>
-
-            <p className="text-lg mb-6">
-              Simplify payroll management and workforce operations with AttendX.
-            </p>
-
-            <a
-              href="https://attendx.info"
-              className="inline-block bg-white text-blue-600 px-8 py-4 rounded-2xl font-bold"
-            >
-              Visit AttendX
-            </a>
+            </ul>
 
           </div>
 
-        </div>
+          <Section
+            title="Why Businesses Need Integrated Systems"
+            text="Attendance and payroll should work together. When attendance systems connect directly with payroll calculations, businesses get better accuracy, faster processing, and improved operational visibility."
+          />
+
+          <Section
+            title="AttendX Payroll System"
+            text="AttendX combines attendance management and payroll automation into one platform. Businesses can monitor staff activity, calculate salaries in PKR, track overtime, and manage workforce records from a centralized system."
+          />
+
+          <Section
+            title="Final Thoughts"
+            text="Payroll management systems are no longer optional for growing businesses. Automation helps organizations save time, reduce salary disputes, and improve employee confidence through accurate payroll processing."
+          />
+
+        </article>
       </div>
     </main>
+  );
+}
+
+function Section({
+  title,
+  text,
+}: {
+  title: string;
+  text: string;
+}) {
+  return (
+    <section className="mb-10">
+
+      <h2 className="text-3xl font-black italic uppercase tracking-tighter mb-4">
+        {title}
+      </h2>
+
+      <p className="text-slate-600 text-lg italic leading-relaxed">
+        {text}
+      </p>
+
+    </section>
   );
 }

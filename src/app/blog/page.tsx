@@ -9,7 +9,7 @@ export const metadata = {
 
 
 export default function BlogPage() {
-  const blogs = [
+  const blog = [
     {
       title: "Best Attendance Management Software in Pakistan",
       slug: "best-attendance-management-software-pakistan",

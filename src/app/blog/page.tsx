@@ -9,28 +9,63 @@ export const metadata = {
 
 
 export default function BlogPage() {
-    const posts = [
-      {
-        title: "Best Attendance Management Software in Pakistan",
-        slug: "best-attendance-management-software-pakistan",
-        description:
-          "Discover how modern attendance software helps Pakistani businesses automate workforce management.",
-      },
+  const blogs = [
+    {
+      title: "Best Attendance Management Software in Pakistan",
+      slug: "best-attendance-management-software-pakistan",
+      description:
+        "Discover how modern businesses in Pakistan are automating attendance and payroll operations.",
+    },
   
-      {
-        title: "How Payroll Management Systems Reduce Salary Errors",
-        slug: "payroll-management-system-benefits",
-        description:
-          "Learn how payroll automation improves salary accuracy and saves business time.",
-      },
+    {
+      title: "How Payroll Software Helps Businesses Reduce Salary Errors",
+      slug: "how-payroll-software-reduces-salary-errors",
+      description:
+        "Learn how payroll automation helps businesses improve salary accuracy and workforce efficiency.",
+    },
   
-      {
-        title: "Why Businesses Need Employee Attendance Tracking",
-        slug: "employee-attendance-tracking",
-        description:
-          "Understand why attendance tracking is essential for modern organizations.",
-      },
-    ];
+    {
+      title: "Why Employee Attendance Tracking Matters for Modern Companies",
+      slug: "employee-attendance-tracking-modern-companies",
+      description:
+        "Explore why attendance tracking is essential for productivity, workforce visibility, and operations.",
+    },
+  
+    {
+      title: "Manual Attendance vs Digital Attendance Systems",
+      slug: "manual-vs-digital-attendance-system",
+      description:
+        "Compare traditional attendance methods with modern digital workforce management systems.",
+    },
+  
+    {
+      title: "Benefits of GPS-Based Attendance Tracking",
+      slug: "benefits-of-gps-attendance-tracking",
+      description:
+        "Discover how GPS-enabled attendance systems improve workforce transparency and accountability.",
+    },
+  
+    {
+      title: "How Small Businesses Can Automate Payroll Management",
+      slug: "small-business-payroll-automation",
+      description:
+        "Learn how small businesses in Pakistan can automate payroll and reduce administrative workload.",
+    },
+  
+    {
+      title: "Best HR & Payroll Solutions for Pakistani Businesses",
+      slug: "best-hr-payroll-solutions-pakistan",
+      description:
+        "Explore modern HR and payroll software solutions designed for growing businesses in Pakistan.",
+    },
+  
+    {
+      title: "Why Workforce Management Software Is Important in 2026",
+      slug: "workforce-management-software-importance-2026",
+      description:
+        "Understand why workforce automation and attendance systems are becoming essential in 2026.",
+    },
+  ];
   
     return (
       <main className="min-h-screen bg-white text-slate-900 px-4 md:px-6 py-16">

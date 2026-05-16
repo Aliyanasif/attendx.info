@@ -1,9 +1,11 @@
+import Link from "next/link";
 import type { Metadata } from "next";
+import { ArrowLeft, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Best Attendance Management Software in Pakistan | AttendX",
   description:
-    "Discover the best attendance management software in Pakistan for modern businesses. Learn how AttendX helps companies automate attendance, payroll, GPS punch tracking, and workforce management.",
+    "Discover the best attendance management software in Pakistan for modern businesses. Learn how AttendX helps automate attendance, payroll, GPS punch tracking, and workforce management.",
   keywords: [
     "attendance management software pakistan",
     "best attendance software",
@@ -18,144 +20,119 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BlogPage() {
+export default function BlogPost() {
   return (
-    <main className="min-h-screen bg-white text-black px-6 py-20">
+    <main className="min-h-screen bg-white text-slate-900 px-4 md:px-6 py-10">
       <div className="max-w-4xl mx-auto">
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.25em] text-slate-400 hover:text-blue-600 transition-colors mb-12"
+        >
+          <ArrowLeft size={16} /> Back to Blog
+        </Link>
 
-        <h1 className="text-5xl font-black mb-8 leading-tight">
-          Best Attendance Management Software in Pakistan
-        </h1>
-
-        <p className="text-lg text-gray-600 mb-10">
-          Businesses in Pakistan are rapidly moving toward digital workforce
-          management systems. Traditional attendance registers and manual payroll
-          methods are becoming outdated, inefficient, and difficult to manage as
-          companies grow.
-        </p>
-
-        <div className="space-y-8 text-lg leading-9 text-gray-800">
-
-          <p>
-            Modern businesses now require attendance management software that
-            can automate employee tracking, payroll calculations, shift
-            monitoring, and workforce operations from one centralized platform.
+        <article>
+          <p className="text-blue-600 font-black uppercase tracking-[0.35em] text-xs mb-4">
+            Attendance Management
           </p>
 
-          <h2 className="text-3xl font-bold mt-12">
-            Problems With Manual Attendance Systems
-          </h2>
+          <h1 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-none mb-6">
+            Best Attendance Management Software in Pakistan
+          </h1>
 
-          <p>
-            Many companies still rely on registers, spreadsheets, WhatsApp
-            updates, or outdated biometric systems. These traditional methods
-            create serious operational issues including salary mistakes,
-            attendance fraud, delayed payroll processing, and inaccurate shift
-            tracking.
+          <p className="text-slate-500 text-lg italic leading-relaxed mb-10">
+            Businesses in Pakistan are rapidly moving toward digital workforce
+            management systems. Manual registers, spreadsheets, and outdated
+            attendance methods are becoming harder to manage as teams grow.
           </p>
 
-          <p>
-            As organizations grow, managing attendance manually becomes slower
-            and less reliable. Managers lose visibility over workforce activity
-            and payroll operations become difficult to control.
-          </p>
+          <Section
+            title="Why Manual Attendance Systems Create Problems"
+            text="Many companies still rely on registers, spreadsheets, WhatsApp updates, or basic biometric systems. These methods can create salary mistakes, missing records, delayed payroll processing, and weak visibility over daily staff activity."
+          />
 
-          <h2 className="text-3xl font-bold mt-12">
-            Why Businesses Need Modern Attendance Software
-          </h2>
+          <Section
+            title="Why Businesses Need Modern Attendance Software"
+            text="A modern attendance management system helps owners and managers track employee attendance, shift timings, absences, overtime, and payroll data from one centralized platform. This reduces manual work and improves operational control."
+          />
 
-          <p>
-            A modern attendance management system helps businesses automate daily
-            workforce operations. Companies can monitor employee attendance in
-            real-time, manage payroll records, track shift timings, and reduce
-            administrative workload.
-          </p>
+          <div className="bg-slate-900 text-white rounded-[32px] p-8 md:p-10 my-10">
+            <h2 className="text-3xl font-black italic uppercase tracking-tighter mb-6">
+              Key Features To Look For
+            </h2>
 
-          <p>
-            This improves operational accuracy while saving valuable management
-            time.
-          </p>
+            <ul className="space-y-4">
+              {[
+                "Real-time employee attendance tracking",
+                "GPS-based punch in and punch out",
+                "Payroll automation in PKR",
+                "Leave and resignation management",
+                "Shift tracking and work calendar",
+                "Mobile-friendly employee portal",
+                "Workforce analytics and reports",
+              ].map((item) => (
+                <li key={item} className="flex gap-3 text-slate-300 italic">
+                  <CheckCircle
+                    className="text-blue-500 shrink-0 mt-0.5"
+                    size={20}
+                  />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-          <h2 className="text-3xl font-bold mt-12">
-            Features Businesses Should Look For
-          </h2>
+          <Section
+            title="GPS Attendance Tracking Is Becoming Essential"
+            text="GPS attendance tracking helps businesses verify employee location during clock-in and clock-out. This improves transparency, reduces fake attendance, and gives managers more confidence in daily workforce records."
+          />
 
-          <ul className="list-disc pl-6 space-y-4">
-            <li>Real-time employee attendance tracking</li>
-            <li>GPS-based punch system</li>
-            <li>Payroll automation</li>
-            <li>Leave and resignation management</li>
-            <li>Shift tracking and work calendar</li>
-            <li>Mobile accessibility</li>
-            <li>Workforce analytics and reports</li>
-          </ul>
+          <Section
+            title="Payroll Automation Reduces Salary Errors"
+            text="Attendance and payroll are closely connected. When payroll is calculated from accurate attendance data, businesses can reduce salary disputes, overtime mistakes, absent-day errors, and delayed monthly processing."
+          />
 
-          <h2 className="text-3xl font-bold mt-12">
-            GPS Attendance Tracking Is Becoming Essential
-          </h2>
+          <Section
+            title="Why AttendX Is Built For Pakistani Businesses"
+            text="AttendX is a modern attendance and payroll management platform designed for businesses in Pakistan. It helps companies manage staff records, GPS punch tracking, leave requests, payroll processing, and workforce reports from one clean dashboard."
+          />
 
-          <p>
-            Modern businesses increasingly require GPS-enabled attendance
-            systems. GPS punch tracking helps organizations verify employee
-            location during clock-in and clock-out processes.
-          </p>
-
-          <p>
-            This improves transparency and reduces attendance manipulation.
-          </p>
-
-          <h2 className="text-3xl font-bold mt-12">
-            Payroll Automation Reduces Salary Errors
-          </h2>
-
-          <p>
-            Payroll mistakes can negatively impact employee trust and business
-            operations. Automated payroll systems calculate salaries, overtime,
-            attendance deductions, and working hours more accurately.
-          </p>
-
-          <p>
-            Businesses can save time while improving payroll efficiency and
-            reducing manual calculations.
-          </p>
-
-          <h2 className="text-3xl font-bold mt-12">
-            AttendX — Smart Workforce Management Software
-          </h2>
-
-          <p>
-            AttendX is a modern attendance and payroll management platform built
-            for businesses in Pakistan. The platform helps companies manage
-            employee attendance, payroll processing, workforce tracking, leave
-            requests, GPS punch systems, and staff management from one
-            centralized dashboard.
-          </p>
-
-          <p>
-            With a clean modern interface and mobile accessibility, AttendX
-            simplifies workforce operations for modern organizations.
-          </p>
-
-          <div className="mt-14 p-8 rounded-3xl bg-blue-600 text-white">
-            <h3 className="text-3xl font-bold mb-4">
+          <div className="bg-blue-600 text-white rounded-[32px] p-8 md:p-10 my-10">
+            <h2 className="text-3xl font-black italic uppercase tracking-tighter mb-4">
               Explore AttendX
-            </h3>
+            </h2>
 
-            <p className="text-lg mb-6">
-              Automate attendance, payroll, and workforce operations with
-              AttendX.
+            <p className="text-blue-100 italic leading-relaxed mb-6">
+              Automate attendance, payroll, GPS punch tracking, and workforce
+              operations with AttendX.
             </p>
 
             <a
               href="https://attendx.info"
-              className="inline-block bg-white text-blue-600 px-8 py-4 rounded-2xl font-bold"
+              className="inline-block bg-white text-blue-600 px-8 py-4 rounded-2xl font-black uppercase text-xs tracking-widest"
             >
               Visit AttendX
             </a>
           </div>
 
-        </div>
+          <Section
+            title="Final Thoughts"
+            text="The best attendance management software is not just a digital register. It should help businesses improve accuracy, reduce manual workload, manage payroll better, and build a reliable workforce operation system."
+          />
+        </article>
       </div>
     </main>
+  );
+}
+
+function Section({ title, text }: { title: string; text: string }) {
+  return (
+    <section className="mb-10">
+      <h2 className="text-3xl font-black italic uppercase tracking-tighter mb-4">
+        {title}
+      </h2>
+
+      <p className="text-slate-600 text-lg italic leading-relaxed">{text}</p>
+    </section>
   );
 }

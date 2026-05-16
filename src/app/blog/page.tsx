@@ -45,6 +45,13 @@ const blogs = [
       "Understand how payroll management systems improve salary accuracy, automate deductions, and reduce manual workload.",
     category: "Payroll Management",
   },
+  {
+    title: "GPS Attendance Tracking App in Pakistan",
+    slug: "gps-attendance-tracking-app-pakistan",
+    description:
+      "Discover how GPS attendance tracking helps Pakistani businesses verify employee locations, reduce fake check-ins, and improve workforce transparency.",
+    category: "GPS Attendance",
+  },
 ];
 
 export default function BlogPage() {

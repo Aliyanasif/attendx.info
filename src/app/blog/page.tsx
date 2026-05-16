@@ -52,6 +52,13 @@ const blogs = [
       "Discover how GPS attendance tracking helps Pakistani businesses verify employee locations, reduce fake check-ins, and improve workforce transparency.",
     category: "GPS Attendance",
   },
+  {
+    title: "How Small Businesses Can Automate Payroll Management",
+    slug: "small-business-payroll-automation",
+    description:
+      "Learn how small businesses can automate payroll, reduce salary mistakes, track overtime, and save admin time.",
+    category: "Payroll Automation",
+  },
 ];
 
 export default function BlogPage() {

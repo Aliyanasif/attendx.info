@@ -412,6 +412,7 @@ export default function LandingPage() {
         </section>
 
         {/* BLOG PREVIEW SECTION */}
+{/* BLOG PREVIEW SECTION */}
 <section id="insights" className="py-20 md:py-32 px-4 md:px-6 bg-slate-50 border-y border-slate-100">
   <div className="max-w-6xl mx-auto">
     <motion.div {...fadeInUp} className="text-center mb-12 md:mb-16">
@@ -423,17 +424,31 @@ export default function LandingPage() {
       </h2>
     </motion.div>
 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <BlogCard
         title="Best Attendance Management Software in Pakistan"
         desc="Learn how attendance software helps Pakistani businesses automate workforce management."
         href="/blog/best-attendance-management-software-pakistan"
       />
+
+      <BlogCard
+        title="GPS Attendance Tracking App in Pakistan"
+        desc="Discover how GPS attendance tracking helps businesses verify employee locations and reduce fake check-ins."
+        href="/blog/gps-attendance-tracking-app-pakistan"
+      />
+
+      <BlogCard
+        title="How Small Businesses Can Automate Payroll"
+        desc="Learn how small businesses can automate payroll, reduce salary mistakes, and save admin time."
+        href="/blog/small-business-payroll-automation"
+      />
+
       <BlogCard
         title="How Payroll Systems Reduce Salary Errors"
         desc="Understand how payroll automation improves salary accuracy and saves business time."
         href="/blog/payroll-management-system-benefits"
       />
+
       <BlogCard
         title="Why Businesses Need Attendance Tracking"
         desc="Explore why employee attendance tracking is important for productivity and payroll."

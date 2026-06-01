@@ -139,7 +139,7 @@ export default function LandingPage() {
               <a href="#contact" className="hover:text-blue-600 transition-colors">Contact</a>
             </div>
 
-            <a href="https://attendx-3bih.vercel.app" target="_blank" rel="noreferrer" className="bg-slate-900 text-white px-4 py-2 md:px-6 md:py-2.5 rounded-full font-bold text-xs md:text-sm hover:bg-blue-600 transition-all shadow-md active:scale-95 text-center">
+            <a href="https://app.attendx.info/" target="_blank" rel="noreferrer" className="bg-slate-900 text-white px-4 py-2 md:px-6 md:py-2.5 rounded-full font-bold text-xs md:text-sm hover:bg-blue-600 transition-all shadow-md active:scale-95 text-center">
               Launch AttendX
             </a>
           </div>

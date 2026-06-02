@@ -108,6 +108,13 @@ const blogs = [
       "Learn how factories can manage worker attendance, shifts, payroll, overtime, and workforce records using attendance software.",
     category: "Factory Management",
   },
+  {
+    title: "Employee Leave Management System",
+    slug: "employee-leave-management-system",
+    description:
+      "Learn how employee leave management systems help businesses manage leave requests, approvals, attendance records, and workforce operations.",
+    category: "Workforce Management",
+  },
 ];
 
 export default function BlogPage() {

@@ -115,6 +115,13 @@ const blogs = [
       "Learn how employee leave management systems help businesses manage leave requests, approvals, attendance records, and workforce operations.",
     category: "Workforce Management",
   },
+  {
+    title: "Overtime Management Software",
+    slug: "overtime-management-software",
+    description:
+      "Learn how overtime management software helps businesses track extra working hours, approvals, payroll accuracy, and employee records.",
+    category: "Payroll Automation",
+  },
 ];
 
 export default function BlogPage() {

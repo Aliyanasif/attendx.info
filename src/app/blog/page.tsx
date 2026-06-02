@@ -94,6 +94,13 @@ const blogs = [
       "Learn how restaurants can manage employee attendance, shifts, payroll, overtime, and staff records using attendance software.",
     category: "Restaurant Management",
   },
+  {
+    title: "Attendance Software for Construction Companies",
+    slug: "attendance-software-for-construction-companies",
+    description:
+      "Learn how construction companies can manage labor attendance, payroll, overtime, and workforce records using attendance software.",
+    category: "Construction Management",
+  },
 ];
 
 export default function BlogPage() {

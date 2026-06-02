@@ -59,6 +59,13 @@ const blogs = [
       "Learn how small businesses can automate payroll, reduce salary mistakes, track overtime, and save admin time.",
     category: "Payroll Automation",
   },
+  {
+    title: "Digital Attendance vs Manual Register",
+    slug: "digital-attendance-vs-manual-register",
+    description:
+      "Compare digital attendance systems with manual registers and learn why businesses are moving to automated workforce tracking.",
+    category: "Attendance Management",
+  },
 ];
 
 export default function BlogPage() {

@@ -139,7 +139,7 @@ export default function LandingPage() {
               <a href="#contact" className="hover:text-blue-600 transition-colors">Contact</a>
             </div>
 
-            <a href="https://app.attendx.info/" target="_blank" rel="noreferrer" className="bg-slate-900 text-white px-4 py-2 md:px-6 md:py-2.5 rounded-full font-bold text-xs md:text-sm hover:bg-blue-600 transition-all shadow-md active:scale-95 text-center">
+            <a href="https://app.attendx.info" target="_blank" rel="noreferrer" className="bg-slate-900 text-white px-4 py-2 md:px-6 md:py-2.5 rounded-full font-bold text-xs md:text-sm hover:bg-blue-600 transition-all shadow-md active:scale-95 text-center">
               Launch AttendX
             </a>
           </div>
@@ -307,6 +307,36 @@ export default function LandingPage() {
           </div>
         </section>
 
+        {/* INDUSTRIES WE SERVE */}
+<section id="industries" className="py-20 md:py-32 px-4 md:px-6 bg-slate-50 border-y border-slate-100">
+  <div className="max-w-7xl mx-auto">
+    <motion.div {...fadeInUp} className="text-center mb-12 md:mb-16">
+      <p className="text-blue-600 font-black uppercase tracking-[0.35em] text-xs mb-4">
+        Industries We Serve
+      </p>
+
+      <h2 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-none mb-6">
+        Built For Pakistani <span className="text-blue-600">Businesses.</span>
+      </h2>
+
+      <p className="text-slate-500 text-base md:text-lg italic max-w-3xl mx-auto leading-relaxed">
+        AttendX helps schools, agencies, software houses, factories, restaurants, retail stores, and construction teams manage attendance, payroll, overtime, staff records, and workforce operations from one smart platform.
+      </p>
+    </motion.div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <IndustryCard title="Schools" desc="Manage teacher and staff attendance with accurate daily records." />
+      <IndustryCard title="Marketing Agencies" desc="Track creative teams, shifts, overtime, and monthly salary records." />
+      <IndustryCard title="Software Houses" desc="Monitor developers, remote teams, late arrivals, and payroll data." />
+      <IndustryCard title="Factories" desc="Control worker attendance, overtime, shift logs, and salary calculations." />
+      <IndustryCard title="Restaurants" desc="Handle staff shifts, late check-ins, absences, and payroll in PKR." />
+      <IndustryCard title="Construction Teams" desc="Verify site attendance with GPS-based punch tracking." />
+      <IndustryCard title="Retail Stores" desc="Track sales staff attendance, working hours, and payroll records." />
+      <IndustryCard title="Small Offices" desc="Replace manual registers with digital attendance and payroll automation." />
+    </div>
+  </div>
+</section>
+
         {/* 8️⃣ FEATURE: THE PAYROLL ENGINE */}
         <section id="payroll" className="py-20 md:py-32 px-4 md:px-6 bg-slate-50 border-y border-slate-100">
           <div className="max-w-[1400px] mx-auto text-center">
@@ -441,6 +471,12 @@ export default function LandingPage() {
         title="How Small Businesses Can Automate Payroll"
         desc="Learn how small businesses can automate payroll, reduce salary mistakes, and save admin time."
         href="/blog/small-business-payroll-automation"
+      />
+
+      <BlogCard
+        title="Digital Attendance vs Manual Register"
+        desc="Compare digital attendance systems with manual registers and learn why businesses are moving to automated workforce tracking."
+        href="/blog/digital-attendance-vs-manual-register"
       />
 
       <BlogCard
@@ -612,5 +648,26 @@ function BlogCard({ title, desc, href }: { title: string; desc: string; href: st
         {desc}
       </p>
     </a>
+  );
+}
+
+function IndustryCard({ title, desc }: { title: string; desc: string }) {
+  return (
+    <motion.div
+      {...fadeInUp}
+      className="bg-white border border-slate-100 rounded-[28px] p-6 shadow-sm hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-100/50 transition-all duration-300"
+    >
+      <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-5">
+        <span className="font-black italic text-lg">{title[0]}</span>
+      </div>
+
+      <h3 className="text-2xl font-black italic uppercase tracking-tighter mb-3 leading-tight">
+        {title}
+      </h3>
+
+      <p className="text-slate-500 text-sm italic leading-relaxed">
+        {desc}
+      </p>
+    </motion.div>
   );
 }

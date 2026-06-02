@@ -64,5 +64,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
         changeFrequency: "monthly",
         priority: 0.75,
       },
+      {
+        url: `${baseUrl}/blog/digital-attendance-vs-manual-register`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.75,
+      },
   ];
 }

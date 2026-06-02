@@ -101,6 +101,13 @@ const blogs = [
       "Learn how construction companies can manage labor attendance, payroll, overtime, and workforce records using attendance software.",
     category: "Construction Management",
   },
+  {
+    title: "Attendance Software for Factories",
+    slug: "attendance-software-for-factories",
+    description:
+      "Learn how factories can manage worker attendance, shifts, payroll, overtime, and workforce records using attendance software.",
+    category: "Factory Management",
+  },
 ];
 
 export default function BlogPage() {

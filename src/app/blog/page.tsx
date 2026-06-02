@@ -80,6 +80,13 @@ const blogs = [
       "Learn how marketing agencies can manage attendance, payroll, remote teams, and staff productivity using attendance software.",
     category: "Agency Management",
   },
+  {
+    title: "Attendance Software for Software Houses",
+    slug: "attendance-software-for-software-houses",
+    description:
+      "Learn how software houses can manage developers, remote teams, attendance, payroll, overtime, and workforce records using attendance software.",
+    category: "Software House Management",
+  },
 ];
 
 export default function BlogPage() {

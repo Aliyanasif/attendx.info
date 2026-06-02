@@ -70,5 +70,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
         changeFrequency: "monthly",
         priority: 0.75,
       },
+      {
+        url: `${baseUrl}/blog/attendance-system-for-schools-pakistan`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.75,
+      },
   ];
 }

@@ -66,6 +66,13 @@ const blogs = [
       "Compare digital attendance systems with manual registers and learn why businesses are moving to automated workforce tracking.",
     category: "Attendance Management",
   },
+  {
+    title: "Attendance System for Schools in Pakistan",
+    slug: "attendance-system-for-schools-pakistan",
+    description:
+      "Learn how schools in Pakistan can manage teacher attendance, staff records, leaves, and payroll more accurately.",
+    category: "School Attendance",
+  },
 ];
 
 export default function BlogPage() {

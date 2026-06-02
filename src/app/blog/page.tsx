@@ -87,6 +87,13 @@ const blogs = [
       "Learn how software houses can manage developers, remote teams, attendance, payroll, overtime, and workforce records using attendance software.",
     category: "Software House Management",
   },
+  {
+    title: "Attendance Software for Restaurants",
+    slug: "attendance-software-for-restaurants",
+    description:
+      "Learn how restaurants can manage employee attendance, shifts, payroll, overtime, and staff records using attendance software.",
+    category: "Restaurant Management",
+  },
 ];
 
 export default function BlogPage() {

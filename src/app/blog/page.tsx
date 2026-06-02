@@ -73,6 +73,13 @@ const blogs = [
       "Learn how schools in Pakistan can manage teacher attendance, staff records, leaves, and payroll more accurately.",
     category: "School Attendance",
   },
+  {
+    title: "Attendance Software for Marketing Agencies",
+    slug: "attendance-software-for-marketing-agencies",
+    description:
+      "Learn how marketing agencies can manage attendance, payroll, remote teams, and staff productivity using attendance software.",
+    category: "Agency Management",
+  },
 ];
 
 export default function BlogPage() {
